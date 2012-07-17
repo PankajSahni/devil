@@ -1,0 +1,9 @@
+<?xml version="1.0"?>  
+<config>  
+    <modules>  
+        <MyModules_Ccavanue>  
+            <active>true</active>
+            <codePool>local</codePool>  
+        </MyModules_Ccavanue>  
+    </modules>  
+</config>

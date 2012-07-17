@@ -1,0 +1,81 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php 
+$customBlockLinksTitle = themeOptions('customBlockLinksTitle');
+$customBlockLinksBody = themeOptions('customBlockLinksBody');
+$secondCustomBlockLinksTitle = themeOptions('secondCustomBlockLinksTitle');
+$secondCustomBlockLinksBody = themeOptions('secondCustomBlockLinksBody');
+$thirdCustomBlockLinksTitle = themeOptions('thirdCustomBlockLinksTitle');
+$thirdCustomBlockLinksBody = themeOptions('thirdCustomBlockLinksBody');
+$deliciousBlock = themeOptions('deliciousBlock');
+$facebookBlock = themeOptions('facebookBlock');
+$diggBlock = themeOptions('diggBlock');
+$twitterBlock = themeOptions('twitterBlock');
+$yahooBlock = themeOptions('yahooBlock');
+$inBlock = themeOptions('inBlock');
+$friendfeedBlock = themeOptions('friendfeedBlock');
+?>
+<div class="footer-container">
+    <div class="footer-blocks">
+    <div class="page">
+        <div class="footer-block">
+          <div class="footer-title"><?php echo $this->__($customBlockLinksTitle) ?></div>
+          <div class="footer-body"><?php if ($customBlockLinksBody): echo $customBlockLinksBody; else: echo $this->getChildHtml('cms_footer_links'); endif; ?></div>
+        </div>
+        <div class="footer-block-2">
+          <div class="footer-title"><?php echo $this->__($secondCustomBlockLinksTitle) ?></div>
+          <div class="footer-body"><?php if ($secondCustomBlockLinksBody): echo $secondCustomBlockLinksBody; else: echo $this->getChildHtml('footer_links'); endif; ?></div>
+        </div>
+        <div class="footer-block-3">
+          <div class="footer-title"><?php echo $this->__($thirdCustomBlockLinksTitle) ?></div>
+          <div class="footer-body">
+          <?php echo $thirdCustomBlockLinksBody; ?>
+          </div>
+        </div>
+        <div class="footer-block-4">
+          <div class="footer-title"><?php echo $this->__('Follow us') ?></div>
+          <div class="footer-body">
+		      <ul>
+		        <?php if ($deliciousBlock): ?><li class="delicious"><a href="<?php echo $deliciousBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		        <?php if ($facebookBlock): ?><li class="facebook"><a href="<?php echo $facebookBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		        <?php if ($diggBlock): ?><li class="digg"><a href="<?php echo $diggBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		        <?php if ($twitterBlock): ?><li class="twitter"><a href="<?php echo $twitterBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		        <?php if ($yahooBlock): ?><li class="yahoo"><a href="<?php echo $yahooBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		        <?php if ($inBlock): ?><li class="in"><a href="<?php echo $inBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		        <?php if ($friendfeedBlock): ?><li class="friendfeed"><a href="<?php echo $friendfeedBlock; ?>">&nbsp;</a></li><?php endif; ?>
+		      </ul>
+          </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+      <div class="page">
+        <p class="copyright"><?php echo $this->getCopyright() ?></p>
+        <p class="copyright-2">Powered by <a href="http://www.magentocommerce.com/">Magento</a>. Designed by <a href="http://nixdanish.com">nixdanish</a></p>
+      </div>
+    </div>
+</div>

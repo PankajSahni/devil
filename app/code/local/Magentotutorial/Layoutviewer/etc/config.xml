@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>	
+	<modules>
+	<Magentotutorial_Layoutviewer>
+		<version>0.1.0</version>
+	</Magentotutorial_Layoutviewer></modules>
+
+	<global>
+		<models>
+			<magentotutorial_layoutviewer>
+				<class>Magentotutorial_Layoutviewer_Model</class>
+			</magentotutorial_layoutviewer>
+			
+			<core>
+				<rewrite>
+					<layout_update>Magentotutorial_Layoutviewer_Model_Layout_Update</layout_update>
+				</rewrite>
+			</core>
+			
+		</models>
+	
+		<events>
+			<controller_action_postdispatch>
+				<observers>
+					<magentotutorial_layoutviewer_model_observer>
+						<type>singleton</type>						
+						<class>Magentotutorial_Layoutviewer_Model_Observer</class>
+						<method>checkForLayoutDisplayRequest</method>
+					</magentotutorial_layoutviewer_model_observer>
+				</observers>
+			</controller_action_postdispatch>
+		</events>
+	</global>	
+</config>

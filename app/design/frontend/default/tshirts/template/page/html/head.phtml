@@ -1,0 +1,233 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<?php 
+function themeOptions ($themeOption) {
+	switch ($themeOption) {
+	 case 'menuType':
+	   return Mage::getStoreConfig('mygeneral/generaloptions/menu_type');
+	 break;
+	 case 'headerWelcome':
+	   return Mage::getStoreConfig('header_welcome/headerwelcome/welcome_type');
+	 break;
+	 case 'welcomeImg':
+	   return Mage::getStoreConfig('header_welcome/headerwelcome/welcome_img');
+	 break;
+	 case 'welcomeTxt':
+	   return Mage::getStoreConfig('header_welcome/headerwelcome/welcome_txt');
+	 break;
+	 case 'headerSliderStatus':
+	   return Mage::getStoreConfig('header_slider/header_slider_main_options/header_slider_status');
+	 break;
+	 case 'anotherHeaderRightTitle':
+	   return Mage::getStoreConfig('header_slider/another_header_options/another_header_right_title');
+	 break;
+	 case 'anotherHeaderProdcutsType':
+	   return Mage::getStoreConfig('header_slider/another_header_options/another_header_slider_products_type');
+	 break;
+	 case 'anotherHeaderLeftProdcutsType':
+	   return Mage::getStoreConfig('header_slider/another_header_options/another_header_left_slider_products_type');
+	 break;
+	 case 'anotherHeaderSpyDelay':
+	   return Mage::getStoreConfig('header_slider/another_header_options/another_header_spy_delay');
+	 break;
+	 case 'anotherHeaderSpyEasing':
+	   return Mage::getStoreConfig('header_slider/another_header_options/another_header_spy_easing');
+	 break;
+	 case 'imagesHover':
+	   return Mage::getStoreConfig('mygeneral/generaloptions/products_hover');
+	 break;
+	 case 'homeProductsSliderStatus':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductsstatus');
+	 break;
+	 case 'homeProductsSliderType':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductstype');
+	 break;
+	 case 'homeProductsSliderAuto':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductsauto');
+	 break;
+	 case 'homeProductsSliderTitle':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductstitle');
+	 break;
+	 case 'homeProductsSliderEffect':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductseffect');
+	 break;
+	 case 'homeProductsSliderDelay':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductsdelay');
+	 break;
+	 case 'homeProductsSliderSpeed':
+	   return Mage::getStoreConfig('home_products/home_products_status/homeproductsspeed');
+	 break;
+	 case 'customFooter':
+	   return Mage::getStoreConfig('custom_footer/custom_footer_status/customfooterstatus');
+	 break;
+	 case 'customFooterTitle':
+	   return Mage::getStoreConfig('custom_footer/custom_footer_text/customfootertitle');
+	 break;
+	 case 'customFooterBody':
+	   return Mage::getStoreConfig('custom_footer/custom_footer_text/customfooterbody');
+	 break;
+	 case 'customBlockLinksTitle':
+	   return Mage::getStoreConfig('custom_footer_two/custom_block_links/custom_block_links_title');
+	 break;
+	 case 'customBlockLinksBody':
+	   return Mage::getStoreConfig('custom_footer_two/custom_block_links/custom_block_links_body');
+	 break;
+	 case 'secondCustomBlockLinksTitle':
+	   return Mage::getStoreConfig('custom_footer_two/second_custom_block_links/second_custom_block_links_title');
+	 break;
+	 case 'secondCustomBlockLinksBody':
+	   return Mage::getStoreConfig('custom_footer_two/second_custom_block_links/second_custom_block_links_body');
+	 break;
+	 case 'thirdCustomBlockLinksTitle':
+	   return Mage::getStoreConfig('custom_footer_two/third_custom_block_links/third_custom_block_links_title');
+	 break;
+	 case 'thirdCustomBlockLinksBody':
+	   return Mage::getStoreConfig('custom_footer_two/third_custom_block_links/third_custom_block_links_body');
+	 break;
+	 case 'deliciousBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/delicious_block');
+	 break;
+	 case 'facebookBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/facebook_block');
+	 break;
+	 case 'diggBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/digg_block');
+	 break;
+	 case 'twitterBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/twitter_block');
+	 break;
+	 case 'yahooBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/yahoo_block');
+	 break;
+	 case 'inBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/in_block');
+	 break;
+	 case 'friendfeedBlock':
+	   return Mage::getStoreConfig('custom_footer_two/social_links/friendfeed_block');
+	 break;
+	 case 'lightboxListing':
+	   return Mage::getStoreConfig('lightboxsection/lightboxoptions/lightboxlisting');
+	 break;
+	 case 'lightboxPrPage':
+	   return Mage::getStoreConfig('lightboxsection/lightboxoptions/lightboxprpage');
+	 break;
+	 case 'lightboxProductSlider':
+	   return Mage::getStoreConfig('lightboxsection/lightboxoptions/lightboxproductslider');
+	 break;
+	}
+}
+?>
+
+<?php $headerSlideEasing = themeOptions ('headerSlideEasing'); ?>
+<?php $headerSlideInterval = themeOptions ('headerSlideInterval'); ?>
+<?php $headerSlideAuto = themeOptions ('headerSlideAuto'); ?>
+<?php $headerSlideDuration = themeOptions ('headerSlideDuration'); ?>
+<?php $headerSlideDirection = themeOptions ('headerSlideDirection'); ?>
+<?php $anotherHeaderSpyDelay = themeOptions ('anotherHeaderSpyDelay'); ?>
+<?php $anotherHeaderSpyEasing = themeOptions ('anotherHeaderSpyEasing'); ?>
+
+<?php $homeProductsSliderStatus = themeOptions ('homeProductsSliderStatus'); ?>
+<?php $homeProductsSliderAuto = themeOptions ('homeProductsSliderAuto'); ?>
+<?php $homeProductsSliderEffect = themeOptions ('homeProductsSliderEffect'); ?>
+<?php $homeProductsSliderDelay = themeOptions ('homeProductsSliderDelay'); ?>
+<?php $homeProductsSliderSpeed = themeOptions ('homeProductsSliderSpeed'); ?>
+
+<?php $lightboxListing = themeOptions('lightboxListing'); ?>
+<?php $lightboxPrPage = themeOptions('lightboxPrPage'); ?>
+
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery-1.5.2.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery.easing.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/cufon/cufon-yui.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/cufon/Myriad_Pro_700.font.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/cufon/cufon-replace.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery.equalHeightColumns.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery.preloader.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/hoverIntent.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/superfish.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery.carousel.min.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/spy.effect.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery.fancybox-1.3.4.pack.js'); ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/script.js'); ?>"></script>
+<script type="text/javascript" src="https://getfirebug.com/firebug-lite.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	if(jQuery('.home-col-left').length) {
+		jQuery('.home-col-left').carousel( { 
+		pagination: true,
+		autoSlide: true,
+		autoSlideInterval: 10000,
+		animSpeed:1000
+		});
+	}
+	
+	<?php if ($homeProductsSliderStatus == 1): ?>
+	if(jQuery('.products-slider').length) {
+		jQuery('.products-slider').carousel( {
+		dispItems: 3,
+		pagination: false,
+		autoSlide: <?php echo $homeProductsSliderAuto; ?>,
+		effect: "<?php echo $homeProductsSliderEffect; ?>",
+		autoSlideInterval:<?php echo $homeProductsSliderDelay; ?>,
+		animSpeed: <?php echo $homeProductsSliderSpeed; ?>
+		});
+	}
+	<?php endif; ?>
+	
+	if(jQuery('ul.spy-effect').length) {
+		jQuery(function () {
+			jQuery('ul.spy-effect').simpleSpy(3, <?php echo $anotherHeaderSpyDelay; ?>, "<?php echo $anotherHeaderSpyEasing; ?>");
+		});
+	}
+	
+})
+
+</script>
+
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+
+<?php if ($lightboxListing || $lightboxPrPage || $lightboxProductSlider): ?>
+<link media="all" href="<?php echo $this->getSkinUrl('css/jquery.fancybox-1.3.4.css'); ?>" type="text/css" rel="stylesheet">
+<?php endif; ?>

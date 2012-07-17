@@ -1,0 +1,73 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<?php $menuType = themeOptions ('menuType'); ?>
+<?php $headerSliderStatus = themeOptions ('headerSliderStatus'); ?>
+
+<?php $headerWelcome = themeOptions ('headerWelcome'); ?>
+<?php $welcomeImg = themeOptions ('welcomeImg'); ?>
+<?php $welcomeTxt = themeOptions ('welcomeTxt'); ?>
+
+<div class="page">
+  <div class="header-container">
+    <div class="header">
+        <div class="logo-block"><h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1></div>
+        <div class="quick-access">
+            <?php echo $this->getChildHtml('topLinks') ?>
+            <?php echo $this->getChildHtml('topCart') ?>
+            <div class="select-block">
+                <?php echo $this->getChildHtml('store_language') ?>
+                <?php echo $this->getChildHtml('currency') ?>
+            </div>
+            <?php if ($headerWelcome == 'txt'): ?>
+            <div class="welcome-block">
+              <div class="welcome-msg">
+                   <div class="welcome-msg-top">
+                       <?php echo $this->__($welcomeTxt) ?>
+                   </div>
+                   <div class="welcome-msg-bottom"></div>
+              </div>
+              <div class="welcome-img"><img src="<?php echo $this->getSkinUrl('images/welcome_img_'.rand(1, 4).'.gif'); ?>" alt="" /></div>
+            </div>
+            <?php else: ?>
+            <div class="welcome-block">
+              <div class="welcome-msg"><img src="<?php echo $this->getSkinUrl('images/'.$welcomeImg); ?>" alt="" /></div>
+              <div class="welcome-img"><img src="<?php echo $this->getSkinUrl('images/welcome_img_'.rand(1, 4).'.gif'); ?>" alt="" /></div>
+            </div>
+            <?php endif; ?>
+        </div>
+        <?php echo $this->getChildHtml('topContainer'); ?>
+    </div>
+</div>
+</div>
+<div class="nav-row" id="<?php if ($menuType==2): ?>menu-wide<?php else: ?>ordinary-menu<?php endif; ?>">
+  <div class="bg-nav"><div class="page"><?php echo $this->getChildHtml('topMenu') ?>
+  <?php echo $this->getChildHtml('topSearch') ?><div class="clear"></div></div></div>
+</div>
+<?php if ($headerSliderStatus == 1): ?><?php echo $this->getChildHtml('header_slider') ?><?php endif; ?>
