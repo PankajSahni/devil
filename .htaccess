@@ -115,6 +115,9 @@
 
     Options +FollowSymLinks
     RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} (.*)$
+    RewriteRule ^(.+)/$ http://www.lafenzer.com/$1 [R=301,L]
 
 ############################################
 ## you can put here your magento root folder

@@ -57,4 +57,13 @@ $_items = $_helper->getItemCount() > 0 ? $_helper->getItemCollection() : null;
         <p class="empty"><?php echo $this->__('You have no items to compare.') ?></p>
     <?php endif; ?>
     </div>
-</div>
+    </div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=168211573243732";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="https://www.facebook.com/devilsattitudegroup" data-send="true" data-width="450" data-show-faces="true"></div>
