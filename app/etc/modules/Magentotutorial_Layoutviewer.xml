@@ -1,8 +1,0 @@
-<config>
-    <modules>
-        <Magentotutorial_Layoutviewer>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Magentotutorial_Layoutviewer>
-    </modules>
-</config> 

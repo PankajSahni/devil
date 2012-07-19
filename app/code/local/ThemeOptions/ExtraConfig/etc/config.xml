@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ThemeOptions_ExtraConfig>
+            <version>1.0.0</version>
+            <depends>
+            <!-- no dependencies -->
+            </depends>
+        </ThemeOptions_ExtraConfig>
+    </modules>
+	<global>
+		<models>
+            <!-- ... -->
+            <ExtraConfig>
+                <class>ThemeOptions_ExtraConfig_Model</class>
+            </ExtraConfig>   
+            <!-- ... -->
+        </models>
+		<helpers>
+			<ExtraConfig>
+				<class>ThemeOptions_ExtraConfig_Helper</class>
+			</ExtraConfig>
+		</helpers>
+	    <resources />
+	    <extraconfig />
+	    <blocks>
+            <mygeneral><class>ThemeOptions_ExtraConfig_Block</class></mygeneral>
+            <header_welcome><class>ThemeOptions_ExtraConfig_Block</class></header_welcome>
+            <header_slider><class>ThemeOptions_ExtraConfig_Block</class></header_slider>
+            <home_products><class>ThemeOptions_ExtraConfig_Block</class></home_products>
+            <custom_footer><class>ThemeOptions_ExtraConfig_Block</class></custom_footer>
+            <custom_footer_two><class>ThemeOptions_ExtraConfig_Block</class></custom_footer_two>
+            <lightboxsection><class>ThemeOptions_ExtraConfig_Block</class></lightboxsection>
+            <themecolors><class>ThemeOptions_ExtraConfig_Block</class></themecolors>
+		</blocks>
+	</global>
+	<!---->
+	<default>
+		<mygeneral>
+			<generaloptions>
+				<menu_type>2</menu_type>
+				<products_hover>1</products_hover>
+			</generaloptions>
+		</mygeneral>
+		<header_welcome>
+			<headerwelcome>
+				<welcome_type>img</welcome_type>
+				<welcome_img>media/welcome_img.png</welcome_img>
+				<welcome_txt>&lt;strong&gt;Lorem Ipsum&lt;/strong&gt;is simply dummy text of the printing.</welcome_txt>
+			</headerwelcome>
+		</header_welcome>
+		<header_slider>
+			<header_slider_main_options>
+				<header_slider_status>1</header_slider_status>
+			</header_slider_main_options>
+			<another_header_options>
+				<another_header_right_title>New Products</another_header_right_title>
+				<another_header_slider_products_type>new</another_header_slider_products_type>
+				<another_header_left_slider_products_type>new</another_header_left_slider_products_type>
+				<another_header_spy_delay>7000</another_header_spy_delay>
+				<another_header_spy_easing>easeOutBounce</another_header_spy_easing>
+			</another_header_options>
+		</header_slider>
+		<home_products>
+			<home_products_status>
+				<homeproductsstatus>1</homeproductsstatus>
+				<homeproductstype>new</homeproductstype>
+				<homeproductsauto>1</homeproductsauto>
+				<homeproductseffect>slide</homeproductseffect>
+				<homeproductstitle>New Products</homeproductstitle>
+				<homeproductsdelay>7000</homeproductsdelay>
+				<homeproductsspeed>1000</homeproductsspeed>
+			</home_products_status>
+		</home_products>
+		<custom_footer>
+			<custom_footer_status>
+				<customfooterstatus>1</customfooterstatus>
+			</custom_footer_status>
+			<custom_footer_text>
+				<customfootertitle>Message box</customfootertitle>
+				<customfooterbody>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</customfooterbody>
+			</custom_footer_text>
+		</custom_footer>
+		<custom_footer_two>
+			<custom_block_links>
+				<custom_block_links_title>Information</custom_block_links_title>
+			</custom_block_links>
+			<second_custom_block_links>
+				<second_custom_block_links_title>Tools &amp; Resources</second_custom_block_links_title>
+			</second_custom_block_links>
+			<third_custom_block_links>
+				<third_custom_block_links_title>Learn</third_custom_block_links_title>
+				<third_custom_block_links_body></third_custom_block_links_body>
+			</third_custom_block_links>
+			<social_links>
+				<delicious_block>http://www.delicious.com/</delicious_block>
+				<facebook_block>http://www.facebook.com/</facebook_block>
+				<digg_block>http://digg.com/</digg_block>
+				<twitter_block>http://twitter.com/#!/nixdanish</twitter_block>
+				<yahoo_block>http://www.yahoo.com/</yahoo_block>
+				<in_block>http://www.linkedin.com/</in_block>
+				<friendfeed_block>http://friendfeed.com/</friendfeed_block>
+			</social_links>
+		</custom_footer_two>
+		<lightboxsection>
+			<lightboxoptions>
+				<lightboxlisting>1</lightboxlisting>
+				<lightboxprpage>1</lightboxprpage>
+				<lightboxproductslider>1</lightboxproductslider>
+			</lightboxoptions>
+		</lightboxsection>
+	</default>
+	<!---->
+</config>

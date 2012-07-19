@@ -1,0 +1,529 @@
+<config>
+	<tabs>
+        <mycustom_tab translate="label" module="ExtraConfig">
+            <label>Theme Options</label>
+            <sort_order>1</sort_order>
+        </mycustom_tab>
+    </tabs>
+    <sections>
+        <mygeneral translate="label" module="ExtraConfig">
+			<label>General Options</label>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <generaloptions translate="label">
+                    <label>General Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <menu_type translate="label">
+			    			<label>Menu Type</label>
+                            <frontend_type>Select</frontend_type>
+							<source_model>ExtraConfig/menutypes</source_model>
+							<sort_order>49</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </menu_type>
+                        <products_hover translate="label">
+			    			<label>Products Hover Effect</label>
+                            <frontend_type>Select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </products_hover>
+                    </fields>
+                </generaloptions>
+            </groups>
+        </mygeneral>
+        <header_welcome translate="label" module="ExtraConfig">
+	    <label>Header Welcome msg</label>
+            <sort_order>2</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <headerwelcome translate="label">
+                    <label>Header Welcome msg</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <welcome_type translate="label">
+			    <label>Type of welcome message</label>
+			    <frontend_type>Select</frontend_type>
+			    <source_model>ExtraConfig/welcometypes</source_model>
+			    <sort_order>1</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>1</show_in_website>
+			    <show_in_store>1</show_in_store>
+                        </welcome_type>
+                        <welcome_img translate="label">
+			    <label>Link to the image</label>
+			    <frontend_type>text</frontend_type>
+			    <comment>Type link to images for welcome block. It has a sense only if type of welcome message is 'image'</comment>
+			    <sort_order>2</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>1</show_in_website>
+			    <show_in_store>1</show_in_store>
+                        </welcome_img>
+                        <welcome_txt translate="label">
+			    <label>Text for welcome message block</label>
+			    <frontend_type>text</frontend_type>
+			    <comment>It has a sense only if type of welcome message is 'text'</comment>
+			    <sort_order>3</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>1</show_in_website>
+			    <show_in_store>1</show_in_store>
+                        </welcome_txt>
+                    </fields>
+                </headerwelcome>
+            </groups>
+        </header_welcome>
+        <header_slider translate="label" module="ExtraConfig">
+	    <label>Header Sliders</label>
+            <sort_order>2</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <header_slider_main_options translate="label">
+                    <label>Main Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <header_slider_status translate="label">
+			    			<label>Block Status</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </header_slider_status>
+                    </fields>
+                </header_slider_main_options>
+                <another_header_options translate="label">
+                    <label>Header Sliders</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <another_header_left_slider_products_type translate="label">
+			    			<label>Left Block Products Type</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>ExtraConfig/productstypes</source_model>
+							<comment>Choose type of products to display in left column</comment>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </another_header_left_slider_products_type>
+                        <another_header_right_title translate="label">
+			    			<label>Right Block Title</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Keep it empty to hide title</comment>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </another_header_right_title>
+                        <another_header_slider_products_type translate="label">
+			    			<label>Right Block Products Type</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>ExtraConfig/productstypes</source_model>
+							<comment>Choose type of products to display in right column</comment>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </another_header_slider_products_type>
+                        <another_header_spy_delay translate="label">
+			    			<label>Right Block Slide Delay</label>
+                            <frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </another_header_spy_delay>
+                        <another_header_spy_easing translate="label">
+			    			<label>Right Block Slide Easing</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>ExtraConfig/easing</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </another_header_spy_easing>
+                    </fields>
+                </another_header_options>
+            </groups>
+        </header_slider>
+        <home_products translate="label" module="ExtraConfig">
+			<label>Home Products Slider</label>
+            <sort_order>3</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <home_products_status translate="label">
+                    <label>Home Products Slider</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <homeproductstitle translate="label">
+			    			<label>Home Products Title</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Keep it empty to hide title</comment>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </homeproductstitle>
+                        <homeproductsstatus translate="label">
+			    			<label>Home Products Slider Status</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </homeproductsstatus>
+				        <homeproductstype translate="label">
+					        <label>Home Products Type</label>
+					        <frontend_type>select</frontend_type>
+					        <source_model>ExtraConfig/productstypes</source_model>
+					        <comment>Choose type of products to display on the homepage</comment>
+					        <sort_order>3</sort_order>
+					        <show_in_default>1</show_in_default>
+					        <show_in_website>1</show_in_website>
+					        <show_in_store>1</show_in_store>
+				        </homeproductstype>
+                        <homeproductsauto translate="label">
+			    			<label>Auto Slide</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </homeproductsauto>
+                        <homeproductseffect translate="label">
+			    			<label>Slide Effect</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>ExtraConfig/homeslidertypes</source_model>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </homeproductseffect>
+                        <homeproductsdelay translate="label">
+			    			<label>Slide Delay</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Depends on autoSlide. Determines the delay between each click using the autoSlide option.</comment>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </homeproductsdelay>
+                        <homeproductsspeed translate="label">
+			    			<label>Slide Speed</label>
+                            <frontend_type>text</frontend_type>
+							<comment>Determines the speed of the animation when using slide</comment>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </homeproductsspeed>
+                    </fields>
+                </home_products_status>
+            </groups>
+        </home_products>
+        <custom_footer translate="label" module="ExtraConfig">
+			<label>Custom Bottom Block</label>
+            <sort_order>4</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <custom_footer_status translate="label">
+                    <label>Custom Bottom Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <customfooterstatus translate="label">
+			    			<label>Custom Bottom Block Status</label>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </customfooterstatus>
+                    </fields>
+                </custom_footer_status>
+                <custom_footer_text translate="label">
+                    <label>Message Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <customfootertitle translate="label">
+			    			<label>Message Block Title</label>
+                            <frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </customfootertitle>
+                        <customfooterbody translate="label">
+			    			<label>Message Block Body</label>
+                            <frontend_type>textarea</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </customfooterbody>
+                    </fields>
+                </custom_footer_text>
+            </groups>
+        </custom_footer>
+        <custom_footer_two translate="label" module="ExtraConfig">
+			<label>Custom Links Block</label>
+            <sort_order>5</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <custom_block_links translate="label">
+                    <label>First Block Links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <custom_block_links_title translate="label">
+			    			<label>Custom Links Title</label>
+                            <frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </custom_block_links_title>
+                        <custom_block_links_body translate="label">
+			    			<label>Custom Links Body</label>
+                            <frontend_type>textarea</frontend_type>
+							<comment>Keep it empty to display default links</comment>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </custom_block_links_body>
+                    </fields>
+                </custom_block_links>
+                <second_custom_block_links translate="label">
+                    <label>Second Block Links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <second_custom_block_links_title translate="label">
+			    			<label>Custom Links Title</label>
+                            <frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </second_custom_block_links_title>
+                        <second_custom_block_links_body translate="label">
+			    			<label>Custom Links Body</label>
+                            <frontend_type>textarea</frontend_type>
+							<comment>Keep it empty to display default links</comment>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </second_custom_block_links_body>
+                    </fields>
+                </second_custom_block_links>
+                <third_custom_block_links translate="label">
+                    <label>Third Block Links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <third_custom_block_links_title translate="label">
+			    			<label>Custom Links Title</label>
+                            <frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </third_custom_block_links_title>
+                        <third_custom_block_links_body translate="label">
+			    			<label>Custom Links Body</label>
+                            <frontend_type>textarea</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </third_custom_block_links_body>
+                    </fields>
+                </third_custom_block_links>
+                <social_links translate="label">
+                    <label>Social Links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <delicious_block translate="label">
+			    			<label>Delicious</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </delicious_block>
+                        <facebook_block translate="label">
+			    			<label>Facebook</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </facebook_block>
+                        <digg_block translate="label">
+			    			<label>Digg</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>3</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </digg_block>
+                        <twitter_block translate="label">
+			    			<label>Twitter Block</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </twitter_block>
+                        <yahoo_block translate="label">
+			    			<label>Yahoo</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>5</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </yahoo_block>
+                        <in_block translate="label">
+			    			<label>Linkedin</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>6</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </in_block>
+                        <friendfeed_block translate="label">
+			    			<label>Friendfeed</label>
+							<comment>Clear to hide</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>7</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </friendfeed_block>
+                    </fields>
+                </social_links>
+            </groups>
+        </custom_footer_two>
+        <lightboxsection translate="label" module="ExtraConfig">
+			<label>Lightbox</label>
+            <sort_order>6</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <tab>mycustom_tab</tab>
+            <groups>
+                <lightboxoptions translate="label">
+                    <label>Status</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <lightboxlisting translate="label">
+			    			<label>On The Listing Page</label>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </lightboxlisting>
+                        <lightboxprpage translate="label">
+			    			<label>On The Product Page</label>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>2</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </lightboxprpage>
+                        <lightboxproductslider translate="label">
+			    			<label>In Product Slider On Homepage</label>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<sort_order>4</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </lightboxproductslider>
+                    </fields>
+                </lightboxoptions>
+            </groups>
+        </lightboxsection>
+    </sections>
+</config>

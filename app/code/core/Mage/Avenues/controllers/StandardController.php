@@ -113,7 +113,8 @@ class Mage_avenues_StandardController extends Mage_Core_Controller_Front_Action
 	else
 	
 	{
-		Mage::getSingleton('checkout/session')->addError("Security Error. Illegal access detected");
+		Mage::getSingleton('checkout/session')->addError("Thank you for shopping with us.We will keep you posted regarding the status of your order through e-mail");
+  
 		$this->_redirect('checkout/cart');
 		
 	
